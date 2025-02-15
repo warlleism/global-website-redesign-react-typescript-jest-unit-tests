@@ -34,13 +34,13 @@ export default function History() {
                     </StyledLink>
                 </div>
 
-                <div className="flex flex-row justify-between w-full h-[50vh]">
+                <div className="flex flex-row justify-between w-full h-[30vh] lg:h-[50vh]">
                     <div className="w-[49%] h-full rounded-sm bg-[#1D1D1D] relative">
                         <img className="absolute bottom-0 right-0 w-[400px]" src={imgReserva} alt="" />
-                        <div className="flex flex-col gap-3" style={{ paddingLeft: 'clamp(0rem, 4vw, 8rem)', paddingTop: 50 }}>
-                            <img className="w-[160px]" src={logoReserva} alt="" />
+                        <div className="z-10 flex flex-col gap-3" style={{ paddingLeft: 'clamp(0rem, 4vw, 8rem)', paddingTop: 'clamp(0rem, 4vw, 8rem)' }}>
+                            <img className="z-10 w-[160px]" src={logoReserva} alt="" />
                             <div className="z-10 text-white lg:w-[360px] text-start text-[.8rem] lg:text-[1.3rem]">Parceiros na transformação digital, impulsionamos inovação e eficiência para levar seu negócio ao próximo nível.</div>
-                            <div className="text-white rounded-sm text-[0.8rem] bg-[red]  w-[70px] h-[20px] flex justify-center items-center">Logística</div>
+                            <div className="z-10 text-white rounded-sm text-[0.8rem] bg-[red]  w-[70px] h-[20px] flex justify-center items-center">Logística</div>
                             <StyledLink href="https://www.youtube.com/watch?v=s6dgLIivhNM" target="_blank" className="" style={{ marginTop: 20 }}>
                                 <div className="h-full text-[.9rem] flex justify-center items-center">Saiba mais</div>
                                 <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2 }} /></div>
@@ -49,10 +49,10 @@ export default function History() {
                     </div>
                     <div className="w-[49%] h-full rounded-sm bg-[#0098FF] relative">
                         <img className="absolute bottom-0 right-0 w-[400px]" src={imgPetz} alt="" />
-                        <div className="flex flex-col gap-3" style={{ paddingLeft: 'clamp(0rem, 4vw, 8rem)', paddingTop: 50 }}>
-                            <img className="w-[100px]" src={petzLogo} alt="" />
+                        <div className="flex flex-col gap-3" style={{ paddingLeft: 'clamp(0rem, 4vw, 8rem)', paddingTop: 'clamp(0rem, 4vw, 8rem)' }}>
+                            <img className="z-10 w-[100px]" src={petzLogo} alt="" />
                             <div className="z-10 text-white lg:w-[360px] text-start text-[.8rem] lg:text-[1.3rem]">Apoiando a jornada de liderança da Petz no mercado varejista, por intermédio de equipes altamente especializadas.</div>
-                            <div className="text-[#000000] rounded-sm text-[0.8rem] bg-[#FBFF00]  w-[70px] h-[20px] flex justify-center items-center">Logística</div>
+                            <div className="z-10 text-[#000000] rounded-sm text-[0.8rem] bg-[#FBFF00]  w-[70px] h-[20px] flex justify-center items-center">Logística</div>
                             <StyledLink href="https://www.youtube.com/watch?v=s6dgLIivhNM" target="_blank" style={{ marginTop: 20, backgroundColor: '#FBFF00' }}>
                                 <div className="h-full text-[#000000] text-[.9rem] flex justify-center items-center">Saiba mais</div>
                                 <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#000000" size={20} className="animate-pulse" style={{ marginTop: 2 }} /></div>
