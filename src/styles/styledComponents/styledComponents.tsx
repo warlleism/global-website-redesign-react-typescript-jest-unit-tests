@@ -37,5 +37,32 @@ export const StyledDropdownList = styled.ul<{ isVisible: boolean }>`
 `;
 
 export const StyledContainer = styled.div`
- margin: 130px 0px 130px 0px;
+
+  width: 70vw;
+  margin: 130px auto ;
+  @media (max-width: 768px) {
+   width: 95%;
+    padding: 0px 00px 0px 00px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
 `;
+
+
+export const StyledLink = styled.a`
+background-color: #0096FB;
+border-radius: 50px;
+color: #fff;
+z-index: 10;  
+font-size: 1rem;
+font-weight: bold;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 120px;
+height: 30px;
+`

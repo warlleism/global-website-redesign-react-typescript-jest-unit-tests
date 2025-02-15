@@ -1,10 +1,10 @@
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { RenderItems } from "./data"
 import { FaFacebookF, FaLinkedinIn, FaUserFriends } from "react-icons/fa"
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io"
 import logo from "../../assets/imgs/home/logo.png"
 import { RiMenu2Fill } from "react-icons/ri"
-import { StyledListItem, StyledSocialMidia, StyledDropdownList } from "../../styles/styledComponents/styledComponents"
+import { StyledListItem, StyledSocialMidia, StyledDropdownList, StyledLink } from "../../styles/styledComponents/styledComponents"
 import { CiInstagram, CiYoutube } from "react-icons/ci"
 import { PiMouseScrollLight } from "react-icons/pi"
 
@@ -25,6 +25,14 @@ export default function Home() {
             element.style.opacity = "1"
         }
     }, [setItem])
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            const value = (Number(item) + 1) % RenderItems.length
+            handleSetItem(value)
+        }, 5000)
+        return () => clearInterval(intervalId)
+    }, [item, handleSetItem])
 
     return (
         <div className="relative h-[100vh]">
@@ -132,11 +140,10 @@ export default function Home() {
                                 <div className="w-[90%] flex flex-col gap-3 items-center lg:items-start">
                                     <h1 className=" lg:text-[2.6rem] font-bold text-[#0096FB]">{obj.title}</h1>
                                     <p className={`text-[1.7rem] ${obj.title ? "lg:text-[2rem]" : "lg:text-[3rem]"}  text-white font-bold lg:text-start text-center`}>{obj.description}</p>
-                                    <a href={obj.url}
-                                        className="bg-[#0096FB] rounded-full text-white text-[1rem] font-bold flex items-center w-[140px] h-[40px] justify-center ">
+                                    <StyledLink href={obj.url}>
                                         <div className="h-full flex justify-center items-center">Saiba mais</div>
                                         <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2 }} /></div>
-                                    </a>
+                                    </StyledLink>
                                 </div>
                             </div>
                         </div>
