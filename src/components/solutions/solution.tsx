@@ -50,7 +50,7 @@ export default function Solutions() {
                 className="flex flex-col items-center justify-center gap-[80px]">
 
                 <div className="flex flex-col items-center justify-center">
-                    <div className="lg:text-[2.6rem] font-bold">Prepare-se para o <span className=" text-[#0096FB]">sucesso</span> digital!</div>
+                    <div style={{marginBottom: 10}} className="text-[1.7rem] tracking-tight lg:text-[2.6rem] font-bold">Prepare-se para o <span className=" text-[#0096FB]">sucesso</span> digital!</div>
                     <div className="lg:w-[650px] text-center"> Com a Globalsys, voc  ter  tudo o que precisa para construir um futuro brilhante para sua empresa.
                         <span className="font-bold text-[#0096FB]"> Inova o Digital Segura da Gnexum </span>
                     </div>
