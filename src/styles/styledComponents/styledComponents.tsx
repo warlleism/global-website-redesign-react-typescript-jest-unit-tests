@@ -54,15 +54,21 @@ export const StyledContainer = styled.div`
 
 
 export const StyledLink = styled.a`
-background-color: #0096FB;
-border-radius: 50px;
-color: #fff;
-z-index: 10;  
-font-size: 1rem;
-font-weight: bold;
-display: flex;
-justify-content: center;
-align-items: center;
-width: 120px;
-height: 30px;
+  background-color: #0096FB;
+  border-radius: 50px;
+  color: #fff;
+  z-index: 10;  
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+
+  @media (max-width: 768px) {
+    width: 80px;
+    height: 20px;
+    font-size: 1.2rem;
+  }
 `
