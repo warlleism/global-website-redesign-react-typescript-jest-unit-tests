@@ -35,3 +35,7 @@ export const StyledDropdownList = styled.ul<{ isVisible: boolean }>`
   background-color: white;
   border-radius: 0.25rem;
 `;
+
+export const StyledContainer = styled.div`
+ margin: 130px 0px 130px 0px;
+`;

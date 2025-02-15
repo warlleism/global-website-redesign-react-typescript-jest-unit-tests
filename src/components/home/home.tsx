@@ -4,8 +4,9 @@ import { FaFacebookF, FaLinkedinIn, FaUserFriends } from "react-icons/fa"
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io"
 import logo from "../../assets/imgs/home/logo.png"
 import { RiMenu2Fill } from "react-icons/ri"
-import { StyledListItem, StyledSocialMidia, StyledDropdownList } from "../../styles/styledComponents/LiField"
+import { StyledListItem, StyledSocialMidia, StyledDropdownList } from "../../styles/styledComponents/styledComponents"
 import { CiInstagram, CiYoutube } from "react-icons/ci"
+import { PiMouseScrollLight } from "react-icons/pi"
 
 export default function Home() {
 
@@ -26,7 +27,7 @@ export default function Home() {
     }, [setItem])
 
     return (
-        <div className="h-screen w-screen relative bg-black overflow-hidden">
+        <div className="relative h-[100vh]">
             <header
                 style={{ padding: 10, zIndex: 50, position: "absolute", top: 0, left: 0, width: "100%" }}
                 className="h-20 w-full flex items-center  justify-between  lg:justify-evenly">
@@ -124,7 +125,7 @@ export default function Home() {
                             id="image-screen"
                             key={obj.id}
                             style={{ backgroundImage: `url(${obj.img})`, zIndex: 10, opacity: index === item ? 1 : 0 }}
-                            className={`absolute left-0 top-0 w-screen h-screen bg-no-repeat bg-cover flex flex-col justify-center items-center trasition-ease-in-out duration-500`}
+                            className={`absolute left-0 top-0 w-full h-full bg-no-repeat bg-cover flex flex-col justify-center items-center trasition-ease-in-out duration-500`}
                         >
                             <div
                                 className="w-[80vw]  lg:w-[50vw] flex justify-center lg:items-start items-center gap-3 trasition-ease-in-out duration-500">
@@ -142,7 +143,7 @@ export default function Home() {
                     )
                 })
             }
-            
+
             <div
                 style={{ zIndex: 20 }}
                 className="flex flex-col justify-around items-center gap-1 absolute bottom-[45vh] lg:right-[20px] right-[10px] border-[1px] border-white rounded-full h-[80px] w-5">
@@ -174,6 +175,10 @@ export default function Home() {
                 <StyledSocialMidia>
                     <CiYoutube color="#fff" size={20} />
                 </StyledSocialMidia>
+            </div>
+
+            <div className="z-50 absolute bottom-[30px] flex justify-center items-center w-full cursor-pointer">
+                <a href="#solutions"><PiMouseScrollLight color="#fff" size={30} className="animate-pulse"/></a>
             </div>
         </div>
     )
