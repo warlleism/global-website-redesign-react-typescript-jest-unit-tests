@@ -80,7 +80,7 @@ export default function Solutions() {
                             <div className="text-center text-white font-bold text-2xl">{item.title}</div>
                         </div>
                     ))}
-                </Carousel>1
+                </Carousel>
             </div>
         </StyledContainer>
 
