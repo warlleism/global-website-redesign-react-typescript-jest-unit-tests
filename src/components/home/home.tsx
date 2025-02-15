@@ -151,7 +151,7 @@ export default function Home() {
                     return (
                         <div
                             style={{ backgroundColor: index === Number(item) ? "#0096FB" : "white", }}
-                            key={index}
+                            key={value.id}
                             className={`w-[10px] h-[10px] bg-white rounded-full cursor-pointer ${index === Number(item) ? "animate-pulse" : ""} `}
                             onClick={() => handleSetItem(index)}
                         >
@@ -178,7 +178,7 @@ export default function Home() {
             </div>
 
             <div className="z-50 absolute bottom-[30px] flex justify-center items-center w-full cursor-pointer">
-                <a href="#solutions"><PiMouseScrollLight color="#fff" size={30} className="animate-pulse"/></a>
+                <a href="#solutions"><PiMouseScrollLight color="#fff" size={30} className="animate-pulse" /></a>
             </div>
         </div>
     )
