@@ -142,17 +142,18 @@ export default function Home() {
                     )
                 })
             }
-
+            
             <div
                 style={{ zIndex: 20 }}
-                className="flex flex-col justify-around items-center gap-1 absolute bottom-[40vh] lg:right-[20px] right-[10px] border-[1px] border-white rounded-full h-[80px] w-5">
+                className="flex flex-col justify-around items-center gap-1 absolute bottom-[45vh] lg:right-[20px] right-[10px] border-[1px] border-white rounded-full h-[80px] w-5">
                 {RenderItems.map((value, index) => {
                     return (
                         <div
-                            style={{ backgroundColor: value.id === (Number(item) + 1) ? "#0096FB" : "white", }}
+                            style={{ backgroundColor: index === Number(item) ? "#0096FB" : "white", }}
                             key={index}
-                            className={`w-[10px] h-[10px] bg-white rounded-full cursor-pointer ${value.id === (Number(item) + 1) ? "animate-pulse" : ""} `}
-                            onClick={() => handleSetItem(index)}>
+                            className={`w-[10px] h-[10px] bg-white rounded-full cursor-pointer ${index === Number(item) ? "animate-pulse" : ""} `}
+                            onClick={() => handleSetItem(index)}
+                        >
                         </div>
                     )
                 })}
