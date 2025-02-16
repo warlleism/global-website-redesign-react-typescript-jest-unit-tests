@@ -26,18 +26,22 @@ export const StyledDropdownList = styled.ul<{ isVisible: boolean }>`
   position: absolute;
   left: 0;
   top: 2.25rem;
-  width: 160px;
   transform: ${props => props.isVisible ? 'translateY(0px)' : 'translateY(-40px)'};
   opacity: ${props => props.isVisible ? '1' : '0'};
   pointer-events: ${props => props.isVisible ? 'auto' : 'none'};
   transition: transform 0.3s ease-in-out, opacity .5s ease;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
   background-color: white;
   border-radius: 0.25rem;
 `;
+
+export const StyledDropdownItem = styled.li`
+  color: #55554e;
+  transition: color .3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    color: #1062ac;
+  }
+`
 
 export const StyledContainer = styled.div`
 
