@@ -56,7 +56,6 @@ export default function Solutions() {
 
             <Carousel
                 responsive={responsive}
-                autoPlay={true}
                 containerClass="w-[95vw] sm:w-[90vw] xl:w-[90vw] 2xl:w-[70vw]"
                 className="cursor-grab"
             >
