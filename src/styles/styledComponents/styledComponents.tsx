@@ -27,7 +27,10 @@ export const StyledDropdownList = styled.ul<{ isVisible: boolean }>`
   left: 0;
   top: 2.25rem;
   width: 160px;
-  display: ${props => props.isVisible ? 'flex' : 'none'};
+  transform: ${props => props.isVisible ? 'translateY(0px)' : 'translateY(-40px)'};
+  opacity: ${props => props.isVisible ? '1' : '0'};
+  pointer-events: ${props => props.isVisible ? 'auto' : 'none'};
+  transition: transform 0.3s ease-in-out, opacity .5s ease;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -45,6 +48,7 @@ export const StyledContainer = styled.div`
     padding: 0px 00px 0px 00px;
   }
 
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,3 +76,24 @@ export const StyledLink = styled.a`
     font-size: 1.2rem;
   }
 `
+export const StyledProduct = styled.div`
+  background-color: #fff;
+  height: 60vh;
+  width: 90%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px #4A4D4F;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 400px;
+    width: 100%;
+  }
+
+
+
+  flex-shrink: 0;
+`;

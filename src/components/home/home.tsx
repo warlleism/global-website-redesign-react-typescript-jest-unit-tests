@@ -26,6 +26,14 @@ export default function Home() {
         }
     }, [setItem])
 
+    const handleMouseOver = useCallback((i: Number) => {
+        setHoverField(i)
+    }, [setHoverField])
+
+    const handleMouseLeave = useCallback(() => {
+        setHoverField(0)
+    }, [setHoverField])
+
     useEffect(() => {
         const intervalId = setInterval(() => {
             const value = (Number(item) + 1) % RenderItems.length
@@ -42,8 +50,8 @@ export default function Home() {
                 <div><img src={logo} alt="logo da empresa" className="w-[150px]" /></div>
                 <ul className="flex flex-row gap-5 hidden lg:flex">
                     <StyledListItem
-                        onMouseEnter={() => setHoverField(1)}
-                        onMouseLeave={() => setHoverField(0)}>
+                        onMouseOver={() => handleMouseOver(1)}
+                        onMouseLeave={handleMouseLeave}>
                         Sobre nós
                         <IoIosArrowDown />
                         <StyledDropdownList isVisible={hoverField === 1}>
@@ -54,8 +62,8 @@ export default function Home() {
                         </StyledDropdownList>
                     </StyledListItem>
                     <StyledListItem
-                        onMouseEnter={() => setHoverField(2)}
-                        onMouseLeave={() => setHoverField(0)}>
+                        onMouseOver={() => handleMouseOver(2)}
+                        onMouseLeave={handleMouseLeave}>
                         Cultura e pessoas
                         <IoIosArrowDown />
                         <StyledDropdownList isVisible={hoverField === 2}>
@@ -66,8 +74,8 @@ export default function Home() {
                         </StyledDropdownList>
                     </StyledListItem>
                     <StyledListItem
-                        onMouseEnter={() => setHoverField(3)}
-                        onMouseLeave={() => setHoverField(0)}>
+                        onMouseOver={() => handleMouseOver(3)}
+                        onMouseLeave={handleMouseLeave}>
                         Eventos
                         <IoIosArrowDown />
                         <StyledDropdownList isVisible={hoverField === 3}>
@@ -78,8 +86,8 @@ export default function Home() {
                         </StyledDropdownList>
                     </StyledListItem>
                     <StyledListItem
-                        onMouseEnter={() => setHoverField(4)}
-                        onMouseLeave={() => setHoverField(0)}>
+                        onMouseOver={() => handleMouseOver(4)}
+                        onMouseLeave={handleMouseLeave}>
                         Soluções
                         <IoIosArrowDown />
                         <StyledDropdownList isVisible={hoverField === 4}>
@@ -90,8 +98,8 @@ export default function Home() {
                         </StyledDropdownList>
                     </StyledListItem>
                     <StyledListItem
-                        onMouseEnter={() => setHoverField(5)}
-                        onMouseLeave={() => setHoverField(0)}>
+                        onMouseOver={() => handleMouseOver(5)}
+                        onMouseLeave={handleMouseLeave}>
                         Fale conosco
                         <IoIosArrowDown />
                         <StyledDropdownList isVisible={hoverField === 5}>
@@ -140,7 +148,7 @@ export default function Home() {
                                 <div className="w-[90%] flex flex-col gap-3 items-center lg:items-start">
                                     <h1 className=" lg:text-[2.6rem] font-bold text-[#0096FB]">{obj.title}</h1>
                                     <p className={`text-[1.7rem] ${obj.title ? "lg:text-[2rem]" : "lg:text-[3rem]"}  text-white font-bold lg:text-start text-center`}>{obj.description}</p>
-                                    <StyledLink href={obj.url}>
+                                    <StyledLink href={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>
                                         <div className="h-full flex text-[.5rem] lg:text-[.9rem] justify-center items-center">Saiba mais</div>
                                         <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2 }} /></div>
                                     </StyledLink>
