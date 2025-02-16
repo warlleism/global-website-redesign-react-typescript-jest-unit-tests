@@ -69,7 +69,7 @@ export default function Solutions() {
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
                             }}
-                            className="relative overflow-hidden h-[380px] w-[100%] lg:h-[600px] sm:w-[380px] lg:w-[330px] 2xl:w-[380px] flex-shrink-0 rounded-[30px] flex justify-center items-center grayscale-[100%] hover:grayscale-[0%] transition-all duration-300 "
+                            className="relative overflow-hidden h-[380px] w-[100%] lg:h-[600px] sm:w-[380px] lg:w-[330px] 2xl:w-[340px] flex-shrink-0 rounded-[30px] flex justify-center items-center grayscale-[100%] hover:grayscale-[0%] transition-all duration-300 "
                             onMouseOver={() => handleMouseOver(item.id)}
                             onMouseOut={() => handleMouseOut(item.id)}
                         >

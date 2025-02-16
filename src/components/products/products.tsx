@@ -8,8 +8,6 @@ import { useState } from "react";
 
 export default function Produtcs() {
 
-
-
     const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
