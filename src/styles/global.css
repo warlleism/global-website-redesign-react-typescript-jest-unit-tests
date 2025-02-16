@@ -7,6 +7,14 @@
     font-family: "Inria Sans", serif;
 }
 
-body{
+body {
     background-color: #F2F2F2;
+}
+
+.react-multiple-carousel__arrow--left {
+    background: #373737 !important;
+}
+
+.react-multiple-carousel__arrow--right {
+    background: #373737 !important;
 }
