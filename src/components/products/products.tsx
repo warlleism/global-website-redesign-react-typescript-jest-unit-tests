@@ -4,6 +4,7 @@ import Lines from "../../assets/imgs/solutions/lines.png"
 import { StyledContainer, StyledLink, StyledProduct } from "../../styles/styledComponents/styledComponents";
 import { IoIosArrowForward } from "react-icons/io";
 import { ProductsRender } from "./data";
+import { useState } from "react";
 
 export default function Produtcs() {
 
@@ -26,9 +27,13 @@ export default function Produtcs() {
             slidesToSlide: 1
         }
     };
+    const [currentItem, setCurrentItem] = useState(1);
 
+    const handleBeforeChange = (nextSlide: number) => {
+        setCurrentItem(nextSlide + 1);
+    };
 
-
+    console.log(currentItem)
     return (
         <StyledContainer id="solutions">
             <img src={Lines} alt="" className="w-[100%] h-[100%] absolute top-0 left-0 opacity-30" />
@@ -41,12 +46,14 @@ export default function Produtcs() {
                 containerClass="w-[95vw] sm:w-[90vw] xl:w-[90vw] 2xl:w-[70vw]"
                 className="cursor-grab"
                 itemClass="px-4"
+                beforeChange={handleBeforeChange}
             >
                 {ProductsRender.map((item, index) => (
-                    <StyledProduct key={index}>
+                    <div style={{padding: 30}}>
+                    <StyledProduct key={index} scale={index == currentItem ? 1.1 : 1} >
                         <img
                             style={{ userSelect: "none", cursor: "default" }}
-                            src={item.img} alt="" className="pointer-events-none w-[100%] h-[200px] border-b-[1px] border-b-[#4A4D4F] object-contain bg-[#fff]" />
+                            src={item.img} alt="" className="pointer-events-none w-[100%] h-[200px] border-b-[1px] border-b-[#4A4D4F] object-contain" />
                         <div className="flex flex-col justify-center items-center after:w-[100%] gap-5 ">
                             <div className="text-[1.7rem] text-[#000000] font-bold relative after:absolute after:bottom-0 after:right-[-20px] after:w-[3px] after:h-[100%] after:bg-[#000000]">{item.title}</div>
                             <div className="text-[.8rem] lg:text-[1rem] text-center">{item.description}</div>
@@ -56,6 +63,7 @@ export default function Produtcs() {
                             <div className=" z-10 h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2 }} /></div>
                         </StyledLink>
                     </StyledProduct>
+                    </div>
                 ))}
             </Carousel>
         </StyledContainer>

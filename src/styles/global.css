@@ -6,3 +6,7 @@
     scroll-behavior: smooth;
     font-family: "Inria Sans", serif;
 }
+
+body{
+    background-color: #F2F2F2;
+}

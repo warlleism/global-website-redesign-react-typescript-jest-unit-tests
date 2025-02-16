@@ -76,12 +76,14 @@ export const StyledLink = styled.a`
     font-size: 1.2rem;
   }
 `
-export const StyledProduct = styled.div`
-  background-color: #fff;
+export const StyledProduct = styled.div<{ scale: number }>`
+  background-color: #F2F2F2;
   height: 60vh;
   width: 90%;
+  scale: ${({ scale }) => scale};
   border-radius: 15px;
   display: flex;
+  transition: all 0.3s ease-in-out;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;

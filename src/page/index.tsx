@@ -1,3 +1,4 @@
+import Brands from "../components/brands/brands";
 import History from "../components/history/history";
 import Home from "../components/home/home";
 import Produtcs from "../components/products/products";
@@ -10,6 +11,7 @@ export default function Index() {
             <Solutions />
             <History />
             <Produtcs />
+            <Brands />
         </>
     )
 }

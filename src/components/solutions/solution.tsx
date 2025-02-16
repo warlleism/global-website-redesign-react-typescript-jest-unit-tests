@@ -61,20 +61,22 @@ export default function Solutions() {
                 className="cursor-grab"
             >
                 {RenderSolutions.map((item) => (
-                    <div
-                        key={item.id}
-                        style={{
-                            backgroundImage: `url(${item.img})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                        }}
-                        className="relative overflow-hidden h-[380px] w-[100%] lg:h-[600px] sm:w-[380px] lg:w-[330px] 2xl:w-[380px] flex-shrink-0 rounded-[30px] flex justify-center items-center grayscale-[100%] hover:grayscale-[0%] transition-all duration-300 "
-                        onMouseOver={() => handleMouseOver(item.id)}
-                        onMouseOut={() => handleMouseOut(item.id)}
-                    >
-                        <div id={`${item.id}-top`} className="pointer-events-none  absolute top-[-130px] right-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
-                        <div id={`${item.id}-bottom`} className="pointer-events-none absolute bottom-[-130px] left-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
-                        <div className="pointer-events-none text-center text-white font-bold text-2xl" style={{ userSelect: "none", cursor: "default" }}>{item.title}</div>
+                    <div style={{ padding: 30 }}>
+                        <div
+                            key={item.id}
+                            style={{
+                                backgroundImage: `url(${item.img})`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                            }}
+                            className="relative overflow-hidden h-[380px] w-[100%] lg:h-[600px] sm:w-[380px] lg:w-[330px] 2xl:w-[380px] flex-shrink-0 rounded-[30px] flex justify-center items-center grayscale-[100%] hover:grayscale-[0%] transition-all duration-300 "
+                            onMouseOver={() => handleMouseOver(item.id)}
+                            onMouseOut={() => handleMouseOut(item.id)}
+                        >
+                            <div id={`${item.id}-top`} className="pointer-events-none  absolute top-[-130px] right-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
+                            <div id={`${item.id}-bottom`} className="pointer-events-none absolute bottom-[-130px] left-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
+                            <div className="pointer-events-none text-center text-white font-bold text-2xl" style={{ userSelect: "none", cursor: "default" }}>{item.title}</div>
+                        </div>
                     </div>
                 ))}
             </Carousel>
