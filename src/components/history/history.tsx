@@ -27,7 +27,7 @@ export default function History() {
                     <div className=" z-10 text-white rounded-sm text-[0.8rem] bg-[#4A4D4F]  w-[70px] h-[20px] flex justify-center items-center">Logística</div>
                     <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" className="z-10" style={{ marginTop: 'clamp(0px, 20px, 20px)' }}>
                         <div className=" z-10 h-full text-[.5rem] lg:text-[.9rem] flex justify-center items-center">Saiba mais</div>
-                        <div className=" z-10 h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: -2 }} /></div>
+                        <div className=" z-10 h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" className="animate-pulse text-[1rem] lg:text-[1.5rem]" style={{ marginTop: -2 }} /></div>
                     </StyledLink>
                 </div>
 
@@ -40,7 +40,7 @@ export default function History() {
                             <div className="z-10 text-white rounded-sm text-[0.8rem] bg-[red]  w-[70px] h-[20px] flex justify-center items-center font-bold">Varejo</div>
                             <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" className="" style={{ marginTop: 'clamp(0px, 20px, 20px)' }}>
                                 <div className="h-full text-[.5rem] lg:text-[.9rem] flex justify-center items-center">Saiba mais</div>
-                                <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: -2 }} /></div>
+                                <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" className="animate-pulse text-[1rem] lg:text-[1.5rem]" /></div>
                             </StyledLink>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ export default function History() {
                             <div className="z-10 text-[#000000] rounded-sm text-[0.8rem] bg-[#FBFF00]  w-[70px] h-[20px] flex justify-center items-center font-bold">Varejo</div>
                             <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style={{ marginTop: 'clamp(0px, 20px, 20px)', backgroundColor: '#FBFF00' }}>
                                 <div className="h-full text-[#000000] text-[.5rem] lg:text-[.9rem] flex justify-center items-center">Saiba mais</div>
-                                <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#000000" size={20} className="animate-pulse" style={{ marginTop: -2 }} /></div>
+                                <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#000000" className="animate-pulse text-[1rem] lg:text-[1.5rem]" /></div>
                             </StyledLink>
                         </div>
                     </div>
@@ -66,14 +66,14 @@ export default function History() {
                         <div className="text-white rounded-sm text-[0.8rem] bg-[#FF0051]  w-[70px] h-[20px] flex justify-center items-center">Varejo</div>
                         <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style={{ marginTop: 20, backgroundColor: '#FF0051' }}>
                             <div className="h-full text-[#fff] text-[.5rem] lg:text-[.9rem] flex justify-center items-center">Saiba mais</div>
-                            <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: -2 }} /></div>
+                            <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" className="animate-pulse text-[1rem] lg:text-[1.5rem]" /></div>
                         </StyledLink>
                     </div>
                 </div>
 
                 <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style={{ marginTop: 20, backgroundColor: '#FF0051', width: 300, height: 40, margin: '0 auto' }}>
                     <div className="h-full text-[#fff] text-[.9rem] flex justify-center items-center">Ver mais histórias</div>
-                    <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: -2 }} /></div>
+                    <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" className="animate-pulse  text-[1.5rem]" style={{ marginTop: -2 }} /></div>
                 </StyledLink>
             </div>
         </StyledContainer>

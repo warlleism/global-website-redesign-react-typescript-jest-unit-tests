@@ -175,10 +175,10 @@ export default function Home() {
                                 <div className="w-[90%] flex flex-col gap-3 items-center lg:items-start">
                                     <h1 className=" lg:text-[2.6rem] font-bold text-[#0096FB]">{obj.title}</h1>
                                     <p className={`text-[1.3rem] ${obj.title ? "lg:text-[2rem]" : "lg:text-[3rem]"}  text-white font-bold lg:text-start text-center`}>{obj.description}</p>
-                                    <StyledLink href={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"} style={{zIndex: 20}}>
-                                        <div className="h-full flex text-[.5rem] lg:text-[1.2rem] justify-center items-center">Saiba mais</div>
-                                        <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2.2 }} /></div>
-                                    </StyledLink>
+                                    <StyledLink href={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"} style={{ zIndex: 20 }}>
+                                        <div className="h-full flex text-[.6rem] lg:text-[1.2rem] justify-center items-center">Saiba mais</div>
+                                        <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" className="animate-pulse text-[1rem] lg:text-[1.2rem]" style={{ marginTop: 2.2 }} /></div>
+                                    </StyledLink>1
                                 </div>
                             </div>
                         </div>
@@ -225,7 +225,7 @@ export default function Home() {
 
 
             <div className="z-50 absolute bottom-[35vh] flex justify-center items-center w-full cursor-pointer">
-                <a href="#solutions"><PiMouseScrollLight color="#fff" size={30} className="animate-pulse" /></a>
+                <a href="#solutions"><PiMouseScrollLight color="#fff" size={40} className="animate-pulse" /></a>
             </div>
         </div >
     )

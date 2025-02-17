@@ -36,8 +36,7 @@ export default function Brands() {
                 <div className="w-full lg:w-[49%] flex flex-col justify-center items-center lg:items-start lg:justify-between gap-5">
                     <div className="text-[1.5rem] font-bold text-[#0000007d]">MARCAS PERCEIRAS</div>
                     <div className="mt-5">
-                        <div style={{ marginBottom: -10 }} className="text-[1.3rem] lg:text-[2.7rem] text-center lg:text-start font-bold text-[#212121] tracking-[-2px]">MOVA-SE MAIS RÁPIDO COM</div>
-                        <div className="text-[1.3rem] lg:text-[2.7rem] text-center lg:text-start font-bold text-[#212121] tracking-[-2px]">COM PARCEIRA <span className="text-[#0096FB] font-black">GLOBALSYS</span></div>
+                        <div className="text-[1.3rem] lg:text-[2.7rem] text-center lg:text-start font-bold text-[#212121] tracking-[-2px]">MOVA-SE MAIS RÁPIDO COM COM PARCEIRA <span className="text-[#0096FB] font-black">GLOBALSYS</span></div>
                         <div className="text-[1.3rem] lg:text-[1.4rem] text-center lg:text-start font-bold">ENTRE EM CONTATO COM A GENTE!</div>
                     </div>
                     <div className="mt-5 text-lg w-full w-[80%]">

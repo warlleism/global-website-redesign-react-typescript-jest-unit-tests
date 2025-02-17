@@ -57,7 +57,7 @@ export default function Produtcs() {
                             </div>
                             <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style={{ marginBottom: 30 }}>
                                 <div className=" z-10 h-full text-[.5rem] lg:text-[.9rem] flex justify-center items-center">Saiba mais</div>
-                                <div className=" z-10 h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: -2 }} /></div>
+                                <div className=" z-10 h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" className="animate-pulse text-[1rem] lg:text-[1.5rem]" /></div>
                             </StyledLink>
                         </StyledProduct>
                     </div>
