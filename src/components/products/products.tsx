@@ -46,20 +46,20 @@ export default function Produtcs() {
                 beforeChange={handleBeforeChange}
             >
                 {ProductsRender.map((item, index) => (
-                    <div style={{padding: 30}}>
-                    <StyledProduct key={index} scale={index == currentItem ? 1.1 : 1} >
-                        <img
-                            style={{ userSelect: "none", cursor: "default" }}
-                            src={item.img} alt="" className="pointer-events-none w-[100%] h-[200px] border-b-[1px] border-b-[#4A4D4F] object-contain" />
-                        <div className="flex flex-col justify-center items-center after:w-[100%] gap-5 ">
-                            <div className="text-[1.7rem] text-[#000000] font-bold relative after:absolute after:bottom-0 after:right-[-20px] after:w-[3px] after:h-[100%] after:bg-[#000000]">{item.title}</div>
-                            <div className="text-[.8rem] lg:text-[1rem] text-center">{item.description}</div>
-                        </div>
-                        <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style={{ marginBottom: 30 }}>
-                            <div className=" z-10 h-full text-[.5rem] lg:text-[.9rem] flex justify-center items-center">Saiba mais</div>
-                            <div className=" z-10 h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2 }} /></div>
-                        </StyledLink>
-                    </StyledProduct>
+                    <div style={{ padding: 30, userSelect: "none" }}>
+                        <StyledProduct key={index} scale={index == currentItem ? 1.1 : 1} >
+                            <img
+                                style={{ userSelect: "none", cursor: "default" }}
+                                src={item.img} alt="" className="pointer-events-none w-[100%] h-[200px] border-b-[1px] border-b-[#4A4D4F] object-contain" />
+                            <div className="flex flex-col justify-center items-center after:w-[100%] gap-5 ">
+                                <div className="text-[1.7rem] text-[#000000] font-bold relative after:absolute after:bottom-0 after:right-[-20px] after:w-[3px] after:h-[100%] after:bg-[#000000]">{item.title}</div>
+                                <div className="text-[.8rem] lg:text-[1rem] text-center">{item.description}</div>
+                            </div>
+                            <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style={{ marginBottom: 30 }}>
+                                <div className=" z-10 h-full text-[.5rem] lg:text-[.9rem] flex justify-center items-center">Saiba mais</div>
+                                <div className=" z-10 h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2 }} /></div>
+                            </StyledLink>
+                        </StyledProduct>
                     </div>
                 ))}
             </Carousel>
