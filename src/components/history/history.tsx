@@ -44,7 +44,7 @@ export default function History() {
                             </StyledLink>
                         </div>
                     </div>
-                    <div className="w-[49%] h-full rounded-sm bg-[#0098FF] relative">
+                    <div className="w-[49%] h-full rounded-sm bg-[#0075ff] relative">
                         <img className="absolute bottom-0 right-0 w-[400px] " src={imgPetz} alt="" />
                         <div className="flex flex-col gap-3" style={{ paddingLeft: 'clamp(0rem, 4vw, 8rem)', paddingTop: 'clamp(0rem, 4vw, 8rem)' }}>
                             <img className="z-10 w-[60px] lg:w-[160px]" src={petzLogo} alt="" />
