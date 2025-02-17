@@ -46,7 +46,7 @@ export default function Solutions() {
     }
 
     return (
-        <StyledContainer id="solutions" style={{ marginTop: 300 }}>
+        <StyledContainer id="solutions">
             <img src={Lines} alt="" className="w-[100%] h-[100%] absolute top-0 left-0 opacity-30" />
             <div className="flex flex-col items-center justify-center">
                 <div style={{ marginBottom: 10 }} className="text-[1.7rem] tracking-tight lg:text-[2.6rem] font-bold text-center">Prepare-se para o <span className=" text-[#0096FB]">sucesso</span> digital!</div>

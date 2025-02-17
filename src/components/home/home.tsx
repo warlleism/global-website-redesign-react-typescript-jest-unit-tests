@@ -45,7 +45,7 @@ export default function Home() {
     }, [item, handleSetItem])
 
     return (
-        <div className="relative h-[100vh]">
+        <div className="relative h-[130vh]">
             <header
                 style={{ padding: 10, zIndex: 50, position: "absolute", top: 0, left: 0, width: "100%" }}
                 className="h-20 w-full flex items-center  justify-between  lg:justify-evenly">
@@ -167,7 +167,7 @@ export default function Home() {
                             id="image-screen"
                             key={index}
                             style={{ backgroundImage: `url(${obj.img})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center", zIndex: 10, opacity: index === item ? 1 : 0 }}
-                            className={`absolute left-0 top-0 w-full h-[130vh] bg-no-repeat bg-cover flex flex-col justify-center items-center trasition-ease-in-out duration-500`}
+                            className={`absolute left-0 top-0 w-full h-[100%] bg-no-repeat bg-cover flex flex-col justify-center items-center trasition-ease-in-out duration-500`}
                         >
                             <div
                                 style={{ marginBottom: 210 }}

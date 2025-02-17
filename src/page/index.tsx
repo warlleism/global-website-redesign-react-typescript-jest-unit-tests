@@ -7,13 +7,13 @@ import Solutions from "../components/solutions/solution";
 
 export default function Index() {
     return (
-        <>
+        <div className="flex flex-col">
             <Home />
             <Solutions />
             <History />
             <Produtcs />
             <Brands />
             <Footer />
-        </>
+        </div>
     )
 }
