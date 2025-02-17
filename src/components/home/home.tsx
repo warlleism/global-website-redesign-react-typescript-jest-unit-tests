@@ -178,7 +178,7 @@ export default function Home() {
                                     <StyledLink href={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"} style={{ zIndex: 20 }}>
                                         <div className="h-full flex text-[.6rem] lg:text-[1.2rem] justify-center items-center">Saiba mais</div>
                                         <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" className="animate-pulse text-[1rem] lg:text-[1.2rem]" style={{ marginTop: 2.2 }} /></div>
-                                    </StyledLink>1
+                                    </StyledLink>
                                 </div>
                             </div>
                         </div>
