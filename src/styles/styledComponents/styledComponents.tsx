@@ -76,7 +76,7 @@ export const StyledLink = styled.a`
 
   @media (max-width: 768px) {
     width: 80px;
-    height: 20px;
+    height: 26px;
     font-size: 1.2rem;
   }
 `
