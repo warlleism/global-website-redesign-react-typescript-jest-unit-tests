@@ -63,7 +63,7 @@ export const StyledContainer = styled.div`
 
 export const StyledLink = styled.a`
   background-color: #0096FB;
-  border-radius: 50px;
+  border-radius: 5px;
   color: #fff;
   z-index: 10;  
   font-size: 1rem;
@@ -71,8 +71,8 @@ export const StyledLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 30px;
+  width: 150px;
+  height: 40px;
 
   @media (max-width: 768px) {
     width: 80px;

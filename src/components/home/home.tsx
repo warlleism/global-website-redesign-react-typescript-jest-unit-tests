@@ -177,7 +177,7 @@ export default function Home() {
                                     <p className={`text-[1.7rem] ${obj.title ? "lg:text-[2rem]" : "lg:text-[3rem]"}  text-white font-bold lg:text-start text-center`}>{obj.description}</p>
                                     <StyledLink href={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>
                                         <div className="h-full flex text-[.5rem] lg:text-[.9rem] justify-center items-center">Saiba mais</div>
-                                        <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2 }} /></div>
+                                        <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: -2 }} /></div>
                                     </StyledLink>
                                 </div>
                             </div>
