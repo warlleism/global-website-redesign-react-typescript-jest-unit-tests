@@ -47,7 +47,7 @@ export default function Footer() {
             </div>
 
             <div className="w-full flex flex-col items-center justify-center border-t-1 border-[#979797] h-[90px]">
-                <div className="text-[1.2rem] font-normal text-[#4C4C4C]">© 2025 Globalsys. Todos os direitos reservados.</div>
+                <div className=" text-[.8rem] lg:text-[1.2rem] font-normal text-[#4C4C4C]">© 2025 Globalsys. Todos os direitos reservados.</div>
             </div>
 
             <div className="absolute bottom-10 right-3"></div>
