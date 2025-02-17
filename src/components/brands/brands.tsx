@@ -9,7 +9,6 @@ import Vix from "../../assets/imgs/brands/vix.png"
 import Will from "../../assets/imgs/brands/will.png"
 import { StyledContainer, StyledLink } from "../../styles/styledComponents/styledComponents"
 import { IoIosArrowForward } from "react-icons/io"
-import { useEffect } from "react"
 
 export default function Brands() {
 
