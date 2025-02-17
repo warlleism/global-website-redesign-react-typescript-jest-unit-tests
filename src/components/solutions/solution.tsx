@@ -64,6 +64,7 @@ export default function Solutions() {
                         <div
                             key={item.id}
                             style={{
+                                userSelect: "none",
                                 backgroundImage: `url(${item.img})`,
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
@@ -72,9 +73,9 @@ export default function Solutions() {
                             onMouseOver={() => handleMouseOver(item.id)}
                             onMouseOut={() => handleMouseOut(item.id)}
                         >
-                            <div style={{ pointerEvents: "none" }} id={`${item.id}-top`} className="absolute top-[-130px] right-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
-                            <div style={{ pointerEvents: "none" }} id={`${item.id}-bottom`} className="absolute bottom-[-130px] left-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
-                            <div style={{ pointerEvents: "none", userSelect: "none" }} className="text-center text-white font-bold text-2xl">{item.title}</div>
+                            <div id={`${item.id}-top`} className="absolute top-[-130px] right-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
+                            <div id={`${item.id}-bottom`} className="absolute bottom-[-130px] left-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
+                            <div className="text-center text-white font-bold text-2xl">{item.title}</div>
                         </div>
                     </div>
                 ))}
