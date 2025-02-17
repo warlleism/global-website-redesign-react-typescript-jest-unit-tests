@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react"
 import { RenderItems } from "./data"
 import { FaFacebookF, FaLinkedinIn, FaUserFriends } from "react-icons/fa"
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io"
-import logo from "../../assets/imgs/home/logo.png"
+import Logo from "../../assets/imgs/home/logo.png"
 import { RiMenu2Fill } from "react-icons/ri"
 import { StyledListItem, StyledSocialMidia, StyledDropdownList, StyledLink, StyledDropdownItem } from "../../styles/styledComponents/styledComponents"
 import { CiInstagram, CiYoutube } from "react-icons/ci"
@@ -39,7 +39,9 @@ export default function Home() {
             const value = (Number(item) + 1) % RenderItems.length
             handleSetItem(value)
         }, 5000)
+
         return () => clearInterval(intervalId)
+
     }, [item, handleSetItem])
 
     return (
@@ -47,15 +49,14 @@ export default function Home() {
             <header
                 style={{ padding: 10, zIndex: 50, position: "absolute", top: 0, left: 0, width: "100%" }}
                 className="h-20 w-full flex items-center  justify-between  lg:justify-evenly">
-                <div><img src={logo} alt="logo da empresa" className="w-[150px]" /></div>
+                <div><img src={Logo} alt="logo da empresa" className="w-[150px]" /></div>
                 <ul className="flex flex-row gap-5 hidden lg:flex">
                     <StyledListItem
                         onMouseOver={() => handleMouseOver(1)}
                         onMouseLeave={handleMouseLeave}>
                         Sobre nós
                         <IoIosArrowDown />
-                        <StyledDropdownList style={{ width: "160px", display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "start", gap: "0.8rem" }}
-                            isVisible={hoverField === 1}>
+                        <StyledDropdownList data-testid="dropdown-1" style={{ width: "160px", display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "start", gap: "0.8rem" }} $isVisible={hoverField === 1}>
                             <StyledDropdownItem>Quem Somos</StyledDropdownItem>
                             <StyledDropdownItem>Histórias de sucesso</StyledDropdownItem>
                             <StyledDropdownItem>Parceiros</StyledDropdownItem>
@@ -66,7 +67,7 @@ export default function Home() {
                         onMouseLeave={handleMouseLeave}>
                         Cultura e pessoas
                         <IoIosArrowDown />
-                        <StyledDropdownList style={{ width: "500px" }} isVisible={hoverField === 2}>
+                        <StyledDropdownList style={{ width: "500px" }} $isVisible={hoverField === 2}>
                             <div className="flex items-start justify-around" style={{ padding: "10px 0" }}>
                                 <div className="flex flex-col gap-5">
                                     <div className="text-[#1062ac] text-[1.1rem] font-semibold">Serviçoes</div>
@@ -101,7 +102,7 @@ export default function Home() {
                         Eventos
                         <IoIosArrowDown />
                         <StyledDropdownList style={{ width: "160px", display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "start", gap: "0.8rem" }}
-                            isVisible={hoverField === 3}>
+                            $isVisible={hoverField === 3}>
                             <StyledDropdownItem>Equipe</StyledDropdownItem>
                             <StyledDropdownItem>Valores</StyledDropdownItem>
                             <StyledDropdownItem>Parceiros</StyledDropdownItem>
@@ -114,7 +115,7 @@ export default function Home() {
                         Soluções
                         <IoIosArrowDown />
                         <StyledDropdownList style={{ width: "160px", display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "start", gap: "0.8rem" }}
-                            isVisible={hoverField === 4}>
+                            $isVisible={hoverField === 4}>
                             <StyledDropdownItem>Equipe</StyledDropdownItem>
                             <StyledDropdownItem>Valores</StyledDropdownItem>
                             <StyledDropdownItem>Parceiros</StyledDropdownItem>
@@ -127,7 +128,7 @@ export default function Home() {
                         Fale conosco
                         <IoIosArrowDown />
                         <StyledDropdownList style={{ width: "160px", display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "start", gap: "0.8rem" }}
-                            isVisible={hoverField === 5}>
+                            $isVisible={hoverField === 5}>
                             <StyledDropdownItem>Equipe</StyledDropdownItem>
                             <StyledDropdownItem>Valores</StyledDropdownItem>
                             <StyledDropdownItem>Parceiros</StyledDropdownItem>
@@ -141,17 +142,17 @@ export default function Home() {
                         <div className="flex flex-row justify-center items-center   h-full w-[75%] text-white hover:bg-[#ffffff70]  transition-all duration-300">Sou Cliente</div>
                     </div>
                     <div className="hidden lg:flex flex flex-row relative">
-                        <div className="flex flex-row justify-center items-center cursor-pointer text-white"
+                        <div data-testid="language-toggle" className="flex flex-row justify-center items-center cursor-pointer text-white"
                             onClick={() => setLang({
                                 ...lang,
                                 state: !lang.state
                             })}>
-                            <div>{lang.lang}</div>
+                            <div data-testid="language">{lang.lang}</div>
                             <IoIosArrowDown />
                         </div>
                         <ul className={`${lang.state ? "block" : "hidden"} flex flex-col justify-center items-center rounded-md absolute bottom-[-60px] w-[50px] bg-white`}>
-                            <li onClick={() => setLang({ lang: "PT", state: false })} className="cursor-pointer" >PT</li>
-                            <li onClick={() => setLang({ lang: "EN", state: false })} className="cursor-pointer" >EN</li>
+                            <li data-testid="language-option-pt" onClick={() => setLang({ lang: "PT", state: false })} className="cursor-pointer" >PT</li>
+                            <li data-testid="language-option-en" onClick={() => setLang({ lang: "EN", state: false })} className="cursor-pointer" >EN</li>
                         </ul>
                     </div>
                     <div className="lg:hidden flex flex-row justify-center items-center cursor-pointer text-white">
@@ -164,7 +165,7 @@ export default function Home() {
                     return (
                         <div
                             id="image-screen"
-                            key={obj.id}
+                            key={index}
                             style={{ backgroundImage: `url(${obj.img})`, zIndex: 10, opacity: index === item ? 1 : 0 }}
                             className={`absolute left-0 top-0 w-full h-full bg-no-repeat bg-cover flex flex-col justify-center items-center trasition-ease-in-out duration-500`}
                         >
@@ -183,14 +184,13 @@ export default function Home() {
                     )
                 })
             }
-            < div
-                style={{ zIndex: 20 }
-                }
+            <div style={{ zIndex: 20 }}
                 className="flex flex-col justify-around items-center gap-1 absolute bottom-[45vh] lg:right-[20px] right-[10px] border-[1px] border-white rounded-full h-[80px] w-5" >
                 {
                     RenderItems.map((value, index) => {
                         return (
                             <div
+                                data-testid={`banner-indicator-${value.id}`}
                                 style={{ backgroundColor: index === Number(item) ? "#0096FB" : "white", }}
                                 key={value.id}
                                 className={`w-[10px] h-[10px] bg-white rounded-full cursor-pointer ${index === Number(item) ? "animate-pulse" : ""} `}
@@ -200,21 +200,21 @@ export default function Home() {
                         )
                     })
                 }
-            </div >
+            </div>
             <div
                 style={{ zIndex: 20 }}
                 className="flex flex-col justify-around items-center gap-3 absolute lg:left-[20px] left-[10px] bottom-[40vh] ">
                 <StyledSocialMidia>
-                    <FaLinkedinIn color="#fff" size={20} />
+                    <FaLinkedinIn color="#fff" size={20} data-testid="linkedin-icon" />
                 </StyledSocialMidia>
                 <StyledSocialMidia>
-                    <CiInstagram color="#fff" size={20} />
+                    <CiInstagram color="#fff" size={20} data-testid="instagram-icon" />
                 </StyledSocialMidia>
                 <StyledSocialMidia>
-                    <FaFacebookF color="#fff" size={20} />
+                    <FaFacebookF color="#fff" size={20} data-testid="facebook-icon" />
                 </StyledSocialMidia>
                 <StyledSocialMidia>
-                    <CiYoutube color="#fff" size={20} />
+                    <CiYoutube color="#fff" size={20} data-testid="youtube-icon" />
                 </StyledSocialMidia>
             </div>
             <div className="z-50 absolute bottom-[30px] flex justify-center items-center w-full cursor-pointer">

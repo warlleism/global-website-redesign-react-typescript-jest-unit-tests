@@ -72,9 +72,9 @@ export default function Solutions() {
                             onMouseOver={() => handleMouseOver(item.id)}
                             onMouseOut={() => handleMouseOut(item.id)}
                         >
-                            <div id={`${item.id}-top`} className="pointer-events-none  absolute top-[-130px] right-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
-                            <div id={`${item.id}-bottom`} className="pointer-events-none absolute bottom-[-130px] left-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
-                            <div className="pointer-events-none text-center text-white font-bold text-2xl" style={{ userSelect: "none", cursor: "default" }}>{item.title}</div>
+                            <div style={{ pointerEvents: "none" }} id={`${item.id}-top`} className="absolute top-[-130px] right-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
+                            <div style={{ pointerEvents: "none" }} id={`${item.id}-bottom`} className="absolute bottom-[-130px] left-[30px] w-[400px] h-[200px] bg-[#ffffff5c] rotate-160 transition-all duration-500" />
+                            <div style={{ pointerEvents: "none", userSelect: "none" }} className="text-center text-white font-bold text-2xl">{item.title}</div>
                         </div>
                     </div>
                 ))}

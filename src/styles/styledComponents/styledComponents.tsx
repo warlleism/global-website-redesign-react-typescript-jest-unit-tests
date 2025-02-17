@@ -21,14 +21,14 @@ export const StyledSocialMidia = styled.div`
   display: flex;
 `;
 
-export const StyledDropdownList = styled.ul<{ isVisible: boolean }>`
+export const StyledDropdownList = styled.ul<{ $isVisible: boolean }>`
   padding: 10px;
   position: absolute;
   left: 0;
   top: 2.25rem;
-  transform: ${props => props.isVisible ? 'translateY(0px)' : 'translateY(-40px)'};
-  opacity: ${props => props.isVisible ? '1' : '0'};
-  pointer-events: ${props => props.isVisible ? 'auto' : 'none'};
+  transform: ${props => props.$isVisible ? 'translateY(0px)' : 'translateY(-40px)'};
+  opacity: ${props => props.$isVisible ? '1' : '0'};
+  pointer-events: ${props => props.$isVisible ? 'auto' : 'none'};
   transition: transform 0.3s ease-in-out, opacity .5s ease;
   background-color: white;
   border-radius: 0.25rem;
