@@ -166,10 +166,11 @@ export default function Home() {
                         <div
                             id="image-screen"
                             key={index}
-                            style={{ backgroundImage: `url(${obj.img})`, zIndex: 10, opacity: index === item ? 1 : 0 }}
-                            className={`absolute left-0 top-0 w-full h-full bg-no-repeat bg-cover flex flex-col justify-center items-center trasition-ease-in-out duration-500`}
+                            style={{ backgroundImage: `url(${obj.img})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center", zIndex: 10, opacity: index === item ? 1 : 0 }}
+                            className={`absolute left-0 top-0 w-full h-[130vh] bg-no-repeat bg-cover flex flex-col justify-center items-center trasition-ease-in-out duration-500`}
                         >
                             <div
+                                style={{ marginBottom: 210 }}
                                 className="w-[80vw]  lg:w-[50vw] flex justify-center lg:items-start items-center gap-3 trasition-ease-in-out duration-500">
                                 <div className="w-[90%] flex flex-col gap-3 items-center lg:items-start">
                                     <h1 className=" lg:text-[2.6rem] font-bold text-[#0096FB]">{obj.title}</h1>
@@ -185,7 +186,7 @@ export default function Home() {
                 })
             }
             <div style={{ zIndex: 20 }}
-                className="flex flex-col justify-around items-center gap-1 absolute bottom-[45vh] lg:right-[20px] right-[10px] border-[1px] border-white rounded-full h-[80px] w-5" >
+                className="flex flex-col justify-around items-center gap-1 absolute bottom-[37vh] lg:right-[20px] right-[10px] border-[1px] border-white rounded-full h-[80px] w-5" >
                 {
                     RenderItems.map((value, index) => {
                         return (
@@ -203,7 +204,7 @@ export default function Home() {
             </div>
             <div
                 style={{ zIndex: 20 }}
-                className="flex flex-col justify-around items-center gap-3 absolute lg:left-[20px] left-[10px] bottom-[40vh] ">
+                className="flex flex-col justify-around items-center gap-3 absolute lg:left-[20px] left-[10px] bottom-[37vh] ">
                 <StyledSocialMidia>
                     <FaLinkedinIn color="#fff" size={20} data-testid="linkedin-icon" />
                 </StyledSocialMidia>

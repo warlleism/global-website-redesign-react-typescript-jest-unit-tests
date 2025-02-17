@@ -1,6 +1,6 @@
 import img1 from "../../assets/imgs/solutions/outsourcing.png"
-import img2 from "../../assets/imgs/home/coffee.png"
-import img3 from "../../assets/imgs/home/digital.png"
+import img2 from "../../assets/imgs/solutions/devops.png"
+import img3 from "../../assets/imgs/solutions/quality-assurance.png"
 
 export const RenderSolutions = [
     {
