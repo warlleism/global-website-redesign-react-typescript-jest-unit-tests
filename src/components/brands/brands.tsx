@@ -41,7 +41,13 @@ export default function Brands() {
                         <div className="text-[1.3rem] lg:text-[1.4rem] text-center lg:text-start font-bold">ENTRE EM CONTATO COM A GENTE!</div>
                     </div>
                     <div className="mt-5 text-lg w-full w-[80%]">
-                        <div className="text-[#4d4d4d] text-[.9rem] lg:text-[1.2rem] text-center lg:text-start">Nosso especialista está pronto para esclarecer suas dúvidas e ajudá-lo a encontrar as <span className="font-bold text-[#0096FB]">melhores soluções</span> para o seu sucesso. Com experiência e dedicação, oferecemos <span className="font-bold text-[#0096FB]">suporte personalizado</span> para guiá-lo no caminho certo.</div>
+                        <div className="text-[#4d4d4d] text-[.9rem] lg:text-[1.2rem] text-center lg:text-start">
+                            Nosso especialista está pronto para esclarecer suas dúvidas e ajudá-lo a encontrar as
+                            <span className="font-bold text-[#0096FB]">melhores soluções</span>
+                            para o seu sucesso. Com experiência e dedicação, oferecemos
+                            <span className="font-bold text-[#0096FB]">suporte personalizado</span>
+                            para guiá-lo no caminho certo.
+                        </div>
                     </div>
                     <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style={{ width: 300, height: 50 }}>
                         <div>Entre em contato</div>

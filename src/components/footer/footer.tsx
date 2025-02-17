@@ -3,7 +3,9 @@ import Certificate1 from "../../assets/imgs/footer/certificate-1.png"
 import Certificate2 from "../../assets/imgs/footer/certificate-2.png"
 import Group1 from "../../assets/imgs/footer/group-1.png"
 import Group2 from "../../assets/imgs/footer/group-2.png"
-import { FaHeadphonesAlt, FaMapMarkerAlt } from "react-icons/fa"
+import { FaFacebookF, FaHeadphonesAlt, FaLinkedinIn, FaMapMarkerAlt } from "react-icons/fa"
+import { StyledSocialMidia } from "../../styles/styledComponents/styledComponents"
+import { CiInstagram, CiYoutube } from "react-icons/ci"
 
 export default function Footer() {
 
@@ -42,6 +44,21 @@ export default function Footer() {
                     <div>
                         <div className="text-[1.2rem] font-bold text-[#4C4C4C]">CENTRAL DE ATENDIMENTO</div>
                         <div className="w-full lg:w-[200px] text-[.9rem]">+55 (27) 3062-2230​ -  <FaHeadphonesAlt color="#5d5d5d" className="inline-block" /></div>
+                    </div>
+
+                    <div className="flex flex-row  items-center gap-3">
+                        <StyledSocialMidia  style={{ border: "solid 1px #979797" }}>
+                            <FaLinkedinIn color="#5d5d5d" size={20} data-testid="linkedin-icon" />
+                        </StyledSocialMidia>
+                        <StyledSocialMidia style={{ border: "solid 1px #979797" }}>
+                            <CiInstagram color="#5d5d5d" size={20} data-testid="instagram-icon" />
+                        </StyledSocialMidia>
+                        <StyledSocialMidia style={{ border: "solid 1px #979797" }}>
+                            <FaFacebookF color="#5d5d5d" size={20} data-testid="facebook-icon" />
+                        </StyledSocialMidia>
+                        <StyledSocialMidia style={{ border: "solid 1px #979797" }}>
+                            <CiYoutube color="#5d5d5d" size={20} data-testid="youtube-icon" />
+                        </StyledSocialMidia>
                     </div>
                 </div>
             </div>
