@@ -11,7 +11,7 @@ export default function Footer() {
 
     return (
         <div style={{ paddingTop: 50, paddingLeft: 50, paddingRight: 50 }} className="w-full relative flex flex-col items-center bg-white gap-10">
-            <img src={Logo} className="w-[200px] lg:w-[300px]" />
+            <img src={Logo} className="w-[200px] lg:w-[250px]" />
 
             <div className="flex flex-row flex-wrap justify-around w-[80vw] gap-5">
                 <div className="flex flex-col gap-5 w-full lg:w-[30%]">
