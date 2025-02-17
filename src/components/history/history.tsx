@@ -63,7 +63,7 @@ export default function History() {
                     <div className=" z-10 flex flex-col gap-3 w-full " style={{ paddingLeft: 'clamp(0rem, 4vw, 8rem)' }}>
                         <img className="w-[100px] lg:w-[160px]" src={wineLogo} alt="" />
                         <div className="text-white w-[360px] text-start text-[1.3rem]">Compromisso contínuo no <span className="font-bold text-[#FF0051]">APP</span> e em diversas iniciativas tecnológicas da maior do mundo!</div>
-                        <div className="text-white rounded-sm text-[0.8rem] bg-[#FF0051]  w-[70px] h-[20px] flex justify-center items-center">Varejo</div>
+                        <div className="text-white rounded-sm text-[0.8rem] bg-[#FF0051]  w-[70px] h-[20px] flex justify-center items-center font-bold">Varejo</div>
                         <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" style={{ marginTop: 20, backgroundColor: '#FF0051' }}>
                             <div className="h-full text-[#fff] text-[.5rem] lg:text-[.9rem] flex justify-center items-center">Saiba mais</div>
                             <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" className="animate-pulse text-[1rem] lg:text-[1.5rem]" /></div>
