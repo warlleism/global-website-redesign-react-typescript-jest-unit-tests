@@ -46,7 +46,7 @@ export default function Solutions() {
     }
 
     return (
-        <StyledContainer id="solutions" style={{ width: "90%" }}>
+        <StyledContainer id="solutions">
             <img src={Lines} alt="" className="w-[100%] h-[100%] absolute top-0 left-0 opacity-30" />
             <div className="flex flex-col items-center justify-center">
                 <div style={{ marginBottom: 10 }} className="text-[1.7rem] tracking-tight lg:text-[2.6rem] font-bold text-center">Prepare-se para o <span className=" text-[#0096FB]">sucesso</span> digital!</div>
@@ -57,7 +57,7 @@ export default function Solutions() {
 
             <Carousel
                 responsive={responsive}
-                containerClass="w-[95vw] sm:w-[90vw] xl:w-[90vw] 2xl:w-[70vw]"
+                containerClass="w-[100%]"
                 className="cursor-grab"
             >
                 {RenderSolutions.map((item) => (
@@ -82,8 +82,8 @@ export default function Solutions() {
                 ))}
             </Carousel>
 
-            <div className="flex flex-rpw items-center justify-center  w-full relative hidden lg:flex">
-                <IoIosArrowForward color="#0096FB" size={120} className="animate-pulse absolute left-[0]" />
+            <div className="flex flex-row items-center justify-center w-full relative hidden lg:flex">
+                <IoIosArrowForward color="#0096FB" size={180} className="animate-pulse absolute left-[-70px]" />
                 <div className="text-[1.4rem]" style={{ paddingLeft: 100 }}>Com a Globalsys, você tem tudo para construir um futuro brilhante para sua empresa. Oferecemos soluções personalizadas e inovadoras, adaptadas ao seu negócio, com expertise em tecnologia e consultoria para impulsionar seu crescimento.
                     <span className="font-bold text-[#0096FB]"> Conheça nossas soluções hoje mesmo e transforme desafios em oportunidades. O futuro começa agora!</span>
                 </div>
