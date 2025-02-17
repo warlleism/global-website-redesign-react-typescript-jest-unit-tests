@@ -170,14 +170,14 @@ export default function Home() {
                             className={`absolute left-0 top-0 w-full h-[100%] bg-no-repeat bg-cover flex flex-col justify-center items-center trasition-ease-in-out duration-500`}
                         >
                             <div
-                                style={{ marginBottom: 210 }}
+                                style={{ marginBottom: 300 }}
                                 className="w-[80vw]  lg:w-[50vw] flex justify-center lg:items-start items-center gap-3 trasition-ease-in-out duration-500">
                                 <div className="w-[90%] flex flex-col gap-3 items-center lg:items-start">
                                     <h1 className=" lg:text-[2.6rem] font-bold text-[#0096FB]">{obj.title}</h1>
-                                    <p className={`text-[1.7rem] ${obj.title ? "lg:text-[2rem]" : "lg:text-[3rem]"}  text-white font-bold lg:text-start text-center`}>{obj.description}</p>
+                                    <p className={`text-[1.3rem] ${obj.title ? "lg:text-[2rem]" : "lg:text-[3rem]"}  text-white font-bold lg:text-start text-center`}>{obj.description}</p>
                                     <StyledLink href={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>
                                         <div className="h-full flex text-[.5rem] lg:text-[1.2rem] justify-center items-center">Saiba mais</div>
-                                        <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2.2}} /></div>
+                                        <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" size={20} className="animate-pulse" style={{ marginTop: 2.2 }} /></div>
                                     </StyledLink>
                                 </div>
                             </div>
@@ -185,40 +185,46 @@ export default function Home() {
                     )
                 })
             }
-            <div style={{ zIndex: 20 }}
-                className="flex flex-col justify-around items-center gap-1 absolute bottom-[66vh] lg:right-[20px] right-[10px] border-[1px] border-white rounded-full h-[80px] w-5" >
-                {
-                    RenderItems.map((value, index) => {
-                        return (
-                            <div
-                                data-testid={`banner-indicator-${value.id}`}
-                                style={{ backgroundColor: index === Number(item) ? "#0096FB" : "white", }}
-                                key={value.id}
-                                className={`w-[10px] h-[10px] bg-white rounded-full cursor-pointer ${index === Number(item) ? "animate-pulse" : ""} `}
-                                onClick={() => handleSetItem(index)}
-                            >
-                            </div>
-                        )
-                    })
-                }
+
+            <div style={{ boxSizing: "border-box", padding: "0 10px" }} className="flex flex-row justify-between w-[100%] items-center absolute bottom-[75vh] z-50 ">
+                <div
+                    style={{ zIndex: 20 }}
+                    className="flex flex-col justify-around items-center gap-3 ">
+                    <StyledSocialMidia>
+                        <FaLinkedinIn color="#fff" size={20} data-testid="linkedin-icon" />
+                    </StyledSocialMidia>
+                    <StyledSocialMidia>
+                        <CiInstagram color="#fff" size={20} data-testid="instagram-icon" />
+                    </StyledSocialMidia>
+                    <StyledSocialMidia>
+                        <FaFacebookF color="#fff" size={20} data-testid="facebook-icon" />
+                    </StyledSocialMidia>
+                    <StyledSocialMidia>
+                        <CiYoutube color="#fff" size={20} data-testid="youtube-icon" />
+                    </StyledSocialMidia>
+                </div>
+                <div style={{ zIndex: 20 }}
+                    className="flex flex-col justify-around items-center gap-1 border-[1px] border-white rounded-full h-[80px] w-5" >
+                    {
+                        RenderItems.map((value, index) => {
+                            return (
+                                <div
+                                    data-testid={`banner-indicator-${value.id}`}
+                                    style={{ backgroundColor: index === Number(item) ? "#0096FB" : "white", }}
+                                    key={value.id}
+                                    className={`w-[10px] h-[10px] bg-white rounded-full cursor-pointer ${index === Number(item) ? "animate-pulse" : ""} `}
+                                    onClick={() => handleSetItem(index)}
+                                >
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
-            <div
-                style={{ zIndex: 20 }}
-                className="flex flex-col justify-around items-center gap-3 absolute lg:left-[20px] left-[10px] bottom-[66vh] ">
-                <StyledSocialMidia>
-                    <FaLinkedinIn color="#fff" size={20} data-testid="linkedin-icon" />
-                </StyledSocialMidia>
-                <StyledSocialMidia>
-                    <CiInstagram color="#fff" size={20} data-testid="instagram-icon" />
-                </StyledSocialMidia>
-                <StyledSocialMidia>
-                    <FaFacebookF color="#fff" size={20} data-testid="facebook-icon" />
-                </StyledSocialMidia>
-                <StyledSocialMidia>
-                    <CiYoutube color="#fff" size={20} data-testid="youtube-icon" />
-                </StyledSocialMidia>
-            </div>
-            <div className="z-50 absolute bottom-[30px] flex justify-center items-center w-full cursor-pointer">
+
+
+
+            <div className="z-50 absolute bottom-[35vh] flex justify-center items-center w-full cursor-pointer">
                 <a href="#solutions"><PiMouseScrollLight color="#fff" size={30} className="animate-pulse" /></a>
             </div>
         </div >
