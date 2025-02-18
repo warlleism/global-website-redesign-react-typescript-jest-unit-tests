@@ -38,7 +38,7 @@ export default function History() {
                             <img className="z-10 w-[100px] lg:w-[160px]" src={logoReserva} alt="" />
                             <div className="z-10 text-white lg:w-[360px] text-start text-[.6rem] lg:text-[1.3rem]">Parceiros na transformação digital, impulsionamos inovação e eficiência para levar seu negócio ao próximo nível.</div>
                             <div className="z-10 text-white rounded-sm text-[0.8rem] bg-[red]  w-[70px] h-[20px] flex justify-center items-center font-bold">Varejo</div>
-                            <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" className="" style={{ marginTop: 'clamp(0px, 20px, 20px)' }}>
+                            <StyledLink href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" className="" style={{ marginTop: 'clamp(0px, 20px, 20px)',  backgroundColor: 'red' }}>
                                 <div className="h-full text-[.5rem] lg:text-[.9rem] flex justify-center items-center">Saiba mais</div>
                                 <div className="h-full flex justify-center items-center"> <IoIosArrowForward color="#fff" className="animate-pulse text-[1rem] lg:text-[1.5rem]" /></div>
                             </StyledLink>
