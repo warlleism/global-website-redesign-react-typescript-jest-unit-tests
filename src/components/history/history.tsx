@@ -13,7 +13,7 @@ export default function History() {
     return (
         <StyledContainer>
             <div className="flex flex-col items-center justify-center">
-                <div style={{ marginBottom: 10 }} className="text-[1.7rem] tracking-tight lg:text-[2.6rem] font-bold text-center">Histórias de <span className=" text-[#0096FB]">sucesso</span> sucesso</div>
+                <div style={{ marginBottom: 10 }} className="text-[1.7rem] tracking-tight lg:text-[2.6rem] font-bold text-center">Histórias de <span className=" text-[#0096FB]">sucesso</span></div>
                 <div className="lg:w-[650px] text-center">Conheça as histórias de transformação que promovemos em nossos clientes.</div>
             </div>
 
