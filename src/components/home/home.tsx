@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState } from "react"
 import { RenderItems } from "./data"
 import { FaFacebookF, FaLinkedinIn, FaUserFriends } from "react-icons/fa"
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io"
-import Logo from "../../assets/imgs/home/logo.png"
 import { RiMenu2Fill } from "react-icons/ri"
 import { StyledListItem, StyledSocialMidia, StyledDropdownList, StyledLink, StyledDropdownItem } from "../../styles/styledComponents/styledComponents"
 import { CiInstagram, CiYoutube } from "react-icons/ci"
@@ -49,7 +48,9 @@ export default function Home() {
             <header
                 style={{ padding: 10, zIndex: 50, position: "absolute", top: 0, left: 0, width: "100%" }}
                 className="h-20 w-full flex items-center  justify-between  lg:justify-evenly">
-                <div><img src={Logo} alt="logo da empresa" className="w-[150px]" /></div>
+                <div className="w-[150px]">
+                    <img src="https://globalsys.com.br/wp-content/uploads/2023/08/LOGO-AZULPNG.png" style={{filter: "brightness(0) invert(1)"}}/>
+                </div>
                 <ul className="flex flex-row gap-5 hidden lg:flex">
                     <StyledListItem
                         onMouseOver={() => handleMouseOver(1)}

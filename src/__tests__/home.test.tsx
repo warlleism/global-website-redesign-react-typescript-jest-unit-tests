@@ -1,4 +1,4 @@
-// @ts-nocheck
+// @ts-nocheck 
 import { render, screen, fireEvent, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Home from '../components/home/home';
@@ -7,19 +7,19 @@ jest.mock('../components/home/data', () => ({
   RenderItems: [
     {
       id: 1,
-      img: 'test-image-1.jpg',
+      img: 'test-image-1.png',
       title: 'Test Title 1',
       description: 'Test Description 1'
     },
     {
       id: 2,
-      img: 'test-image-2.jpg',
+      img: 'test-image-2.png',
       title: 'Test Title 2',
       description: 'Test Description 2'
     },
     {
       id: 3,
-      img: 'test-image-3.jpg',
+      img: 'test-image-3.png',
       title: 'Test Title 3',
       description: 'Test Description 3'
     }
@@ -27,9 +27,11 @@ jest.mock('../components/home/data', () => ({
 }));
 
 describe('Home Component', () => {
+  let homeComponent;
 
   beforeEach(() => {
     jest.useFakeTimers();
+    homeComponent = render(<Home />);
   });
 
   afterEach(() => {
@@ -38,9 +40,6 @@ describe('Home Component', () => {
   });
 
   test('renders navigation menu items', () => {
-
-    const { getByText } = render(<Home />);
-
     const menuItems = [
       'Sobre nós',
       'Cultura e pessoas',
@@ -50,14 +49,11 @@ describe('Home Component', () => {
     ];
 
     menuItems.forEach(item => {
-      expect(getByText(item)).toBeInTheDocument();
+      expect(screen.getByText(item)).toBeInTheDocument();
     });
   });
 
   test('renders social media icons', () => {
-
-    const { getByTestId } = render(<Home />);
-
     const socialIcons = [
       'linkedin-icon',
       'instagram-icon',
@@ -66,78 +62,61 @@ describe('Home Component', () => {
     ];
 
     socialIcons.forEach(icon => {
-      expect(getByTestId(icon)).toBeInTheDocument();
+      expect(screen.getByTestId(icon)).toBeInTheDocument();
     });
   });
 
   test('changes language dropdown', () => {
+    const language = screen.getByTestId('language');
+    expect(language).toHaveTextContent(/PT|EN/);
 
-    const { getByText, getByTestId } = render(<Home />);
-
-    const language = getByTestId('language');
-    expect(language).toBeInTheDocument(/PT|EN/);
-
-    const languageToggle = getByTestId('language-toggle');
+    const languageToggle = screen.getByTestId('language-toggle');
     fireEvent.click(languageToggle);
 
-    const englishOption = getByTestId('language-option-en');
-    const portuguesOption = getByTestId('language-option-pt');
+    const englishOption = screen.getByTestId('language-option-en');
+    const portuguesOption = screen.getByTestId('language-option-pt');
 
-    expect(englishOption).toBeInTheDocument("EN");
-    expect(portuguesOption).toBeInTheDocument("PT");
+    expect(englishOption).toHaveTextContent('EN');
+    expect(portuguesOption).toHaveTextContent('PT');
 
     fireEvent.click(portuguesOption);
-    expect(language).toBeInTheDocument('PT');
+    expect(language).toHaveTextContent('PT');
 
     fireEvent.click(englishOption);
-    expect(language).toBeInTheDocument('EN');
+    expect(language).toHaveTextContent('EN');
   });
 
   test('auto-rotates banner images', () => {
-
-    const { getByText } = render(<Home />);
-
-    expect(getByText('Test Title 1')).toBeInTheDocument();
+    expect(screen.getByText('Test Title 1')).toBeInTheDocument();
 
     act(() => {
       jest.advanceTimersByTime(5000);
     });
 
-    expect(getByText('Test Title 2')).toBeInTheDocument();
+    expect(screen.getByText('Test Title 2')).toBeInTheDocument();
 
     act(() => {
       jest.advanceTimersByTime(5000);
     });
 
-    expect(getByText('Test Title 3')).toBeInTheDocument();
-
+    expect(screen.getByText('Test Title 3')).toBeInTheDocument();
   });
 
   test('hover interactions on menu items', () => {
-
-    const { getByText, getByTestId } = render(<Home />);
-    const aboutUsMenu = getByText('Sobre nós');
+    const aboutUsMenu = screen.getByText('Sobre nós');
 
     fireEvent.mouseOver(aboutUsMenu);
-    const dropdownItems = getByTestId('dropdown-1');
-    expect(dropdownItems).toBeInTheDocument();
+    expect(screen.getByTestId('dropdown-1')).toBeInTheDocument();
   });
 
   test('banner indicators change displayed banner', () => {
-    
-    const { getByText, getByTestId } = render(<Home />);
+    expect(screen.getByText('Test Title 1')).toBeInTheDocument();
 
-    expect(getByText('Test Title 1')).toBeInTheDocument();
+    fireEvent.click(screen.getByTestId('banner-indicator-2'));
+    expect(screen.getByText('Test Title 2')).toBeInTheDocument();
 
-    const secondBannerIndicator = getByTestId('banner-indicator-2');
-    fireEvent.click(secondBannerIndicator);
-
-    expect(getByText('Test Title 2')).toBeInTheDocument();
-
-    const thirdBannerIndicator = getByTestId('banner-indicator-3');
-    fireEvent.click(thirdBannerIndicator);
-
-    expect(getByText('Test Title 3')).toBeInTheDocument();
+    fireEvent.click(screen.getByTestId('banner-indicator-3'));
+    expect(screen.getByText('Test Title 3')).toBeInTheDocument();
   });
 
 });
