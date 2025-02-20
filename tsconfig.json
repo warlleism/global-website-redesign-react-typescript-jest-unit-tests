@@ -21,9 +21,4 @@
       "jest"
     ]
   },
-  "include": [
-    "src/**/*",
-    "src/assets.d.ts",
-    "__mocks__"
-  ]
 }
