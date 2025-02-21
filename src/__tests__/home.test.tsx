@@ -27,11 +27,10 @@ jest.mock('../components/home/data', () => ({
 }));
 
 describe('Home Component', () => {
-  let homeComponent;
 
   beforeEach(() => {
     jest.useFakeTimers();
-    homeComponent = render(<Home />);
+    let homeComponent = render(<Home />);
   });
 
   afterEach(() => {
