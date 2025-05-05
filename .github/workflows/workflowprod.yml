@@ -13,9 +13,11 @@ jobs:
         with:
           node-version: 22.
           cache: "npm"
+          cache-dependency-path:~//.npm
 
       - name: Build the project and install dependencies and run tests
         run: |
           npm install
           npm run build
           npm test
+
